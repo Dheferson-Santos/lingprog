@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingProg - Linguagens de Programação</title>
+    
+    <!-- ===== FAVICON (Logo da aba do navegador) ===== -->
+    <link rel="icon" type="image/png" href="img/logo-site.png">
+    
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="site.css">
+    
+    <!-- ===== FONTES ===== -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <!-- ===== FONT AWESOME (ÍCONES) ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- LOADER / TELA DE CARREGAMENTO             -->
+    <!-- ========================================== -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="fa-3x">
+                <i class="fa-solid fa-cog fa-spin-snap fa-spin"></i>
+            </div>
+            <h2>LingProg</h2>
+            <p>Carregando...</p>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- CABEÇALHO                                 -->
+    <!-- ========================================== -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo-site.png" alt="Logo LingProg" class="logo-img">
+                <div class="logo-text">
+                    <h1>LingProg</h1>
+                    <p>Explore as linguagens de programação</p>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Início</a></li>
+                    <li><a href="#linguagens">Linguagens</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+
+            <!-- BOTÃO DE TEMA CLARO/ESCURO -->
+            <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- BANNER / INTRODUÇÃO                       -->
+    <!-- ========================================== -->
+    <section id="home" class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <span class="badge"> Plataforma de aprendizado</span>
+                    <h2>Domine as <span class="highlight">linguagens</span> de programação</h2>
+                    <p>
+                        Este site tem como objetivo unificar a maior quantidade de informações acerca das linguagens de programação, democratizando e aglutinando o conhecimento.
+                        Tenha acesso a informações básicas de como a linguagem funciona, a melhor IDE para cada, dicionários das linguagens, exemplos práticos de códigos em cada linguagem e explicação de estruturas.
+                    </p>
+                    
+                    <div class="pixel-btn-wrapper">
+                        <a href="#linguagens" class="btn btn-pixel liquid-pixel">
+                            <span class="btn-text">START</span>
+                            <span class="btn-pixel-bg"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-image">
+                    <div class="floating-cards">
+                        <a href="#linguagens" class="pixel-card">
+                            <img src="img/c-plus-plus.png" alt="c++">
+                        </a>
+                        <a href="#linguagens" class="pixel-card">
+                            <img src="img/c.png" alt="c">
+                        </a>
+                        <a href="#linguagens" class="pixel-card">
+                            <img src="img/js.png" alt="javascript">
+                        </a>
+                        <a href="#linguagens" class="pixel-card">
+                            <img src="img/python.png" alt="python">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE LINGUAGENS (CARDS)        -->
+  
+    <section id="linguagens" class="linguagens">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Linguagens</span>
+                <h2 class="section-title"> Linguagens de Programação</h2>
+                <p class="section-subtitle">
+                    Conheça as linguagens mais utilizadas no desenvolvimento de software
+                </p>
+            </div>
+
+            <div class="cards-grid" id="cardsGrid">
+                
+                <!-- CARD 1: LUA -->
+                <div class="card card-lua dark-card" data-language="lua">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <img src="img/icone-lua.png" alt="lua">
+                        </div>
+                        <div class="card-info-top">
+                            <h3>Lua</h3>
+                            <span class="card-users"><i class="fas fa-users"></i> 1.3M devs</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        Linguagem brasileira leve e poderosa, amplamente usada em jogos, automação e scripts embutidos.
+                    </p>
+                    <span class="card-tag">LUA</span>
+                    <a href="lua.html" class="btn-card">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- CARD 2: CSS -->
+                <div class="card card-css dark-card" data-language="css">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <img src="img/icone-css.png" alt="css">
+                        </div>
+                        <div class="card-info-top">
+                            <h3>CSS</h3>
+                            <span class="card-users"><i class="fas fa-users"></i> 1.3M devs</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        Linguagem de estilo para criar designs incríveis e totalmente responsivos.
+                    </p>
+                    <span class="card-tag">CSS</span>
+                    <a href="css.html" class="btn-card">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- CARD 3: JavaScript -->
+                <div class="card card-js dark-card" data-language="js">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <img src="img/icone-js.png" alt="javascript">
+                        </div>
+                        <div class="card-info-top">
+                            <h3>JavaScript</h3>
+                            <span class="card-users"><i class="fas fa-users"></i> 2.5M devs</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        Linguagem essencial para criar interatividade tanto no front-end quanto no back-end.
+                    </p>
+                    <span class="card-tag">JS</span>
+                    <a href="javascript.html" class="btn-card">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- CARD 4: Python -->
+                <div class="card card-python dark-card" data-language="python">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <img src="img/python-card.png" alt="python">
+                        </div>
+                        <div class="card-info-top">
+                            <h3>Python</h3>
+                            <span class="card-users"><i class="fas fa-users"></i> 2.8M devs</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        Linguagem poderosa e versátil para desenvolvimento, automação, dados e inteligência artificial.
+                    </p>
+                    <span class="card-tag">PYTHON</span>
+                    <a href="python.html" class="btn-card">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- CARD 5: Java -->
+                <div class="card card-java dark-card" data-language="java">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <img src="img/icone-java.png" alt="Java">
+                        </div>
+                        <div class="card-info-top">
+                            <h3>Java</h3>
+                            <span class="card-users"><i class="fas fa-users"></i> 1.8M devs</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        Robusta e multiplataforma, amplamente utilizada em sistemas empresariais e Android.
+                    </p>
+                    <span class="card-tag">JAVA</span>
+                    <a href="java.html" class="btn-card">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- CARD 6: C# -->
+                <div class="card card-csharp dark-card" data-language="csharp">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <img src="img/icone-csharp.png" alt="C#">
+                        </div>
+                        <div class="card-info-top">
+                            <h3>C#</h3>
+                            <span class="card-users"><i class="fas fa-users"></i> 1.0M devs</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        Criada pela Microsoft, é a principal linguagem para jogos (Unity) e apps .NET.
+                    </p>
+                    <span class="card-tag">C#</span>
+                    <a href="csharp.html" class="btn-card">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- CARD 7: PHP -->
+                <div class="card card-php dark-card" data-language="php">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <img src="img/icone-php.png" alt="PHP">
+                        </div>
+                        <div class="card-info-top">
+                            <h3>PHP</h3>
+                            <span class="card-users"><i class="fas fa-users"></i> 1.5M devs</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        Essencial no desenvolvimento web, especialmente em sistemas como WordPress.
+                    </p>
+                    <span class="card-tag">PHP</span>
+                    <a href="php.html" class="btn-card">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- CARD 8: TypeScript -->
+                <div class="card card-typescript dark-card" data-language="typescript">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <img src="img/icone-typescript.png" alt="TypeScript">
+                        </div>
+                        <div class="card-info-top">
+                            <h3>TypeScript</h3>
+                            <span class="card-users"><i class="fas fa-users"></i> 1.3M devs</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        Superset do JavaScript que adiciona tipagem estática para projetos de grande escala.
+                    </p>
+                    <span class="card-tag">TS</span>
+                    <a href="typescript.html" class="btn-card">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE   -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sobre</span>
+                <h2 class="section-title"> Sobre o LingProg</h2>
+            </div>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>
+                        O <strong>LingProg</strong> é uma plataforma criada para ajudar
+                        desenvolvedores a aprender e explorar linguagens de programação
+                        de forma prática e visual.
+                    </p>
+                    <p>
+                        Nosso objetivo é fornecer conteúdo de qualidade, exemplos
+                        interativos e uma comunidade ativa para troca de conhecimento.
+                    </p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Conteúdo atualizado</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Exemplos práticos</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Comunidade ativa</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="2500000">0</span>
+                        <span class="stat-label">Desenvolvedores</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="8">0</span>
+                        <span class="stat-label">Linguagens</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ       -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>💻 LingProg</h3>
+                    <p>
+                        Aprenda linguagens de programação de forma prática e divertida.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links rápidos</h4>
+                    <ul>
+                        <li><a href="#linguagens">Linguagens</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LingProg devs - Todos os direitos reservados</p>
+                <p class="footer-version">Versão 2.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
