@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LingProg é um site que informa a história de linguagens de programação">
     <title>LingProg - Linguagens de Programação</title>
     
     <!-- ===== FAVICON (Logo da aba do navegador) ===== -->
-    <link rel="icon" type="image/png" href="img/logo-site.png">
+    <link rel="icon" type="image/webp" href="img/logo-site.WebP">
     
+    <!-- ===== CONEXÕES ANTECIPADAS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="site.css">
-    
-    <!-- ===== FONTES ===== -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    
-    <!-- ===== FONT AWESOME (ÍCONES) ===== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ===== FONTES (uma única requisição, sem bloquear a renderização) ===== -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap"></noscript>
+
+    <!-- ===== FONT AWESOME (ÍCONES) (sem bloquear a renderização) ===== -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        @font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2) format("woff2")}
+        @font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2) format("woff2")}
+        @font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2) format("woff2")}
+    </style>
 </head>
 <body>
 
@@ -39,7 +52,7 @@
     <header id="header">
         <div class="container">
             <div class="logo">
-                <img src="img/logo-site.png" alt="Logo LingProg" class="logo-img">
+                <img src="img/logo-site.WebP" alt="Logotipo da LingProg sobre fundo transparente, com um símbolo abstrato azul, vermelho e branco acima do texto LingProg; visual vibrante associado à programação." class="logo-img" width="320" height="320" fetchpriority="high" decoding="async">
                 <div class="logo-text">
                     <h1>LingProg</h1>
                     <p>Explore as linguagens de programação</p>
@@ -54,7 +67,6 @@
                 </ul>
             </nav>
 
-            <!-- BOTÃO DE TEMA CLARO/ESCURO -->
             <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
                 <i class="fas fa-moon"></i>
             </button>
@@ -64,6 +76,8 @@
             </button>
         </div>
     </header>
+
+    <main>
 
     <!-- ========================================== -->
     <!-- BANNER / INTRODUÇÃO                       -->
@@ -89,16 +103,16 @@
                 <div class="banner-image">
                     <div class="floating-cards">
                         <a href="#linguagens" class="pixel-card">
-                            <img src="img/c-plus-plus.png" alt="c++">
+                            <img src="img/c-plus-plus.WebP" alt="c++" width="120" height="120" decoding="async" fetchpriority="high">
                         </a>
                         <a href="#linguagens" class="pixel-card">
-                            <img src="img/c.png" alt="c">
+                            <img src="img/c.WebP" alt="c" width="120" height="120" decoding="async" fetchpriority="high">
                         </a>
                         <a href="#linguagens" class="pixel-card">
-                            <img src="img/js.png" alt="javascript">
+                            <img src="img/js.WebP" alt="javascript" width="120" height="120" decoding="async" fetchpriority="high">
                         </a>
                         <a href="#linguagens" class="pixel-card">
-                            <img src="img/python.png" alt="python">
+                            <img src="img/python.WebP" alt="python" width="120" height="120" decoding="async" fetchpriority="high">
                         </a>
                     </div>
                 </div>
@@ -107,7 +121,6 @@
     </section>
 
     <!-- SEÇÃO DE LINGUAGENS (CARDS)        -->
-  
     <section id="linguagens" class="linguagens">
         <div class="container">
             <div class="section-header">
@@ -124,7 +137,7 @@
                 <div class="card card-lua dark-card" data-language="lua">
                     <div class="card-top">
                         <div class="card-icon">
-                            <img src="img/icone-lua.png" alt="lua">
+                            <img src="img/icone-lua.WebP" alt="lua" width="100" height="100" loading="lazy" decoding="async">
                         </div>
                         <div class="card-info-top">
                             <h3>Lua</h3>
@@ -142,7 +155,7 @@
                 <div class="card card-css dark-card" data-language="css">
                     <div class="card-top">
                         <div class="card-icon">
-                            <img src="img/icone-css.png" alt="css">
+                            <img src="img/icone-css.WebP" alt="css" width="100" height="100" loading="lazy" decoding="async">
                         </div>
                         <div class="card-info-top">
                             <h3>CSS</h3>
@@ -160,7 +173,7 @@
                 <div class="card card-js dark-card" data-language="js">
                     <div class="card-top">
                         <div class="card-icon">
-                            <img src="img/icone-js.png" alt="javascript">
+                            <img src="img/icone-js.WebP" alt="javascript" width="100" height="100" loading="lazy" decoding="async">
                         </div>
                         <div class="card-info-top">
                             <h3>JavaScript</h3>
@@ -178,7 +191,7 @@
                 <div class="card card-python dark-card" data-language="python">
                     <div class="card-top">
                         <div class="card-icon">
-                            <img src="img/python-card.png" alt="python">
+                            <img src="img/python-card.WebP" alt="python" width="100" height="100" loading="lazy" decoding="async">
                         </div>
                         <div class="card-info-top">
                             <h3>Python</h3>
@@ -196,7 +209,7 @@
                 <div class="card card-java dark-card" data-language="java">
                     <div class="card-top">
                         <div class="card-icon">
-                            <img src="img/icone-java.png" alt="Java">
+                            <img src="img/icone-java.WebP" alt="Java" width="100" height="100" loading="lazy" decoding="async">
                         </div>
                         <div class="card-info-top">
                             <h3>Java</h3>
@@ -214,7 +227,7 @@
                 <div class="card card-csharp dark-card" data-language="csharp">
                     <div class="card-top">
                         <div class="card-icon">
-                            <img src="img/icone-csharp.png" alt="C#">
+                            <img src="img/icone-csharp.WebP" alt="C#" width="100" height="100" loading="lazy" decoding="async">
                         </div>
                         <div class="card-info-top">
                             <h3>C#</h3>
@@ -232,7 +245,7 @@
                 <div class="card card-php dark-card" data-language="php">
                     <div class="card-top">
                         <div class="card-icon">
-                            <img src="img/icone-php.png" alt="PHP">
+                            <img src="img/icone-php.WebP" alt="PHP" width="100" height="100" loading="lazy" decoding="async">
                         </div>
                         <div class="card-info-top">
                             <h3>PHP</h3>
@@ -250,7 +263,7 @@
                 <div class="card card-typescript dark-card" data-language="typescript">
                     <div class="card-top">
                         <div class="card-icon">
-                            <img src="img/icone-typescript.png" alt="TypeScript">
+                            <img src="img/icone-typescript.WebP" alt="TypeScript" width="100" height="100" loading="lazy" decoding="async">
                         </div>
                         <div class="card-info-top">
                             <h3>TypeScript</h3>
@@ -315,6 +328,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- RODAPÉ       -->
     <footer>
         <div class="container">
@@ -325,7 +340,9 @@
                         Aprenda linguagens de programação de forma prática e divertida.
                     </p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Dheferson-Santos/lingprog" aria-label="GitHub de Dheferson Santos"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Ilzuko" aria-label="GitHub de Ilzuko"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/luan2904secundaria-pixel" aria-label="GitHub de luan2904secundaria-pixel"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -333,7 +350,6 @@
                     <ul>
                         <li><a href="#linguagens">Linguagens</a></li>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -352,10 +368,10 @@
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top">
+    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
