@@ -237,6 +237,9 @@ if (bannerTitle) {
     
     function typeWriter() {
         if (!typingStarted) {
+            // trava a largura da palavra para o título não "pular" de linha enquanto digita (importante no celular)
+            bannerTitle.style.minWidth = bannerTitle.getBoundingClientRect().width + 'px';
+            bannerTitle.style.textAlign = 'left';
             bannerTitle.textContent = '';
             typingStarted = true;
         }
