@@ -1,12 +1,3 @@
-/* ========================================== */
-/* ESTILOS DAS PÁGINAS DE LINGUAGEM           */
-/* Cada página define --lang-color (cor da    */
-/* linguagem), --lang-light (versão clara,    */
-/* legível no fundo escuro) e --lang-on (cor  */
-/* do texto sobre botões).                    */
-/* ========================================== */
-
-/* Logo menor no cabeçalho (antes ocupava 160px e empurrava o conteúdo) */
 .logo-link {
     display: flex;
     align-items: center;
