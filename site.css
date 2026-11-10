@@ -2,6 +2,16 @@
 /* TEMA CLARO E ESCURO - VARIÁVEIS             */
 /* ========================================== */
 
+/* Fonte reserva com métricas parecidas com o Inter: evita deslocamento de layout enquanto a fonte carrega */
+@font-face {
+    font-family: 'Inter Fallback';
+    src: local('Arial');
+    size-adjust: 107.4%;
+    ascent-override: 90.2%;
+    descent-override: 22.5%;
+    line-gap-override: 0%;
+}
+
 :root {
     --bg-body: #f0f2f5;
     --bg-card: #ffffff;
@@ -36,7 +46,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     background: var(--bg-body);
     color: var(--text-primary);
     line-height: 1.6;
@@ -87,6 +97,7 @@ ul {
 .loader-content h2 {
     font-size: 2em;
     background: linear-gradient(135deg, #667eea, #764ba2);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -106,7 +117,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: box-shadow 0.3s ease, padding 0.3s ease;
 }
 
 header.scrolled {
@@ -145,6 +156,7 @@ header .container {
     margin: 0;
     line-height: 1.1;
     background: linear-gradient(135deg, #667eea, #764ba2);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -166,7 +178,7 @@ nav ul {
 nav ul li a {
     color: #ccc;
     font-weight: 500;
-    transition: all 0.3s;
+    transition: color 0.3s, background 0.3s;
     padding: 8px 16px;
     border-radius: 8px;
     position: relative;
@@ -211,7 +223,7 @@ nav ul li a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     margin-left: 15px;
     flex-shrink: 0;
 }
@@ -293,7 +305,7 @@ body.dark-mode .banner {
 .banner-text .badge {
     display: inline-block;
     background: rgba(102, 126, 234, 0.2);
-    color: #667eea;
+    color: #8a9bf4;
     padding: 6px 18px;
     border-radius: 20px;
     font-size: 0.85em;
@@ -312,8 +324,10 @@ body.dark-mode .banner {
 }
 
 .banner-text h2 .highlight {
+    display: inline-block;
     background: linear-gradient(135deg, #667eea, #764ba2);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -457,7 +471,7 @@ body.dark-mode .banner {
 .section-tag {
     display: inline-block;
     background: rgba(102, 126, 234, 0.1);
-    color: #667eea;
+    color: #8a9bf4;
     padding: 6px 20px;
     border-radius: 20px;
     font-size: 0.85em;
@@ -465,6 +479,10 @@ body.dark-mode .banner {
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+body:not(.dark-mode) .section-tag {
+    color: #4353c9;
 }
 
 .section-title {
@@ -507,7 +525,7 @@ body.dark-mode .banner {
     box-shadow:
         0 0 15px rgba(0, 110, 255, 0.2),
         inset 0 0 25px rgba(0, 90, 255, 0.05);
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
     opacity: 0;
     transform: translateY(30px);
 }
@@ -598,7 +616,7 @@ body:not(.dark-mode) .card {
     filter:
         drop-shadow(0 0 10px rgba(0, 130, 255, 0.8))
         drop-shadow(0 0 20px rgba(0, 130, 255, 0.4));
-    transition: 0.4s ease;
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .card:hover .card-icon img {
@@ -643,6 +661,7 @@ body:not(.dark-mode) .card-info-top h3 {
 .card-js h3        { color: #f7df1e; }
 .card-python h3 {
     background: linear-gradient(90deg, #168cff, #55b5ff, #ffc400);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -712,7 +731,7 @@ body:not(.dark-mode) .card-desc {
     border-radius: 8px;
     font-size: 0.9em;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: gap 0.3s ease, background 0.3s ease, color 0.3s ease;
     margin-top: auto;
     background: rgba(255, 255, 255, 0.05);
     color: #fff;
@@ -791,7 +810,7 @@ body:not(.dark-mode) .btn-card {
     padding: 30px;
     border-radius: 16px;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .stat:hover {
@@ -853,7 +872,7 @@ body.dark-mode footer {
     height: 40px;
     background: rgba(255,255,255,0.05);
     border-radius: 50%;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
     color: #ccc;
 }
 
@@ -869,7 +888,7 @@ body.dark-mode footer {
 
 .footer-section ul li a {
     opacity: 0.7;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
 }
 
 .footer-section ul li a:hover {
@@ -888,6 +907,52 @@ body.dark-mode footer {
     opacity: 0.7;
 }
 
+/* DESENVOLVEDORES (rodapé) */
+.footer-devs {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 25px 0;
+    margin-bottom: 20px;
+}
+
+.footer-devs h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.devs-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.devs-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50px;
+    color: #ccc;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.devs-list a i {
+    font-size: 1.4em;
+}
+
+.devs-list a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.devs-list a:focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 3px;
+}
+
 /* BOTÃO VOLTAR AO TOPO */
 .back-to-top {
     position: fixed;
@@ -901,7 +966,7 @@ body.dark-mode footer {
     border-radius: 50%;
     font-size: 1.2em;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
     opacity: 0;
     visibility: hidden;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
@@ -920,6 +985,10 @@ body.dark-mode footer {
 
 /* RESPONSIVIDADE */
 @media (max-width: 992px) {
+    .logo-img {
+        max-height: 100px;
+    }
+
     .banner-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -974,6 +1043,39 @@ body.dark-mode footer {
     
     .menu-toggle {
         display: block;
+    }
+
+    .logo {
+        gap: 10px;
+    }
+
+    .logo-img {
+        max-height: 56px;
+    }
+
+    .logo-text h1 {
+        font-size: 1.4em;
+    }
+
+    .logo-text p {
+        display: none;
+    }
+
+    .banner-content {
+        gap: 40px;
+    }
+
+    .devs-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .devs-list a {
+        justify-content: center;
+    }
+
+    .footer-devs {
+        text-align: center;
     }
 
     .theme-toggle {
