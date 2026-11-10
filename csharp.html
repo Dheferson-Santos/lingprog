@@ -6,19 +6,33 @@
     <title>C# - LingProg</title>
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="img/logo-site.png">
+    <link rel="icon" type="image/webp" href="img/logo-site.WebP">
 
     <!-- CSS GLOBAL E DA PÁGINA DE LINGUAGEM -->
     <link rel="stylesheet" href="site.css">
     <link rel="stylesheet" href="linguagem.css">
 
+    <!-- CONEXÕES ANTECIPADAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
     <!-- FONTES E ÍCONES -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Press+Start+2P&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Press+Start+2P&display=swap"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <!-- Font Awesome: troca a fonte assim que carregar (font-display: swap) -->
+    <style>
+        @font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2) format("woff2")}
+        @font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2) format("woff2")}
+        @font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2) format("woff2")}
+    </style>
 
     <!-- PRISM.JS (cores do código) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"></noscript>
 </head>
 <body class="dark-mode">
 
@@ -27,7 +41,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html" class="logo-link">
-                    <img src="img/logo-site.png" alt="Logo LingProg" class="logo-img">
+                    <img src="img/logo-site.WebP" alt="Logo LingProg" class="logo-img" width="320" height="320" fetchpriority="high" decoding="async">
                     <div class="logo-text">
                         <h1>LingProg</h1>
                         <p>Explore as linguagens de programação</p>
@@ -52,6 +66,8 @@
             </button>
         </div>
     </header>
+
+    <main>
 
     <!-- HERO: título + números -->
     <section class="lang-hero" style="--lang-color: #9b4f96; --lang-light: #d17dcb; --lang-on: #fff;">
@@ -79,7 +95,7 @@
                 </div>
                 <div class="lang-hero-icon">
                     <div class="icon-circle">
-                        <img src="img/icone-csharp.png" alt="Logo C#">
+                        <img src="img/icone-csharp.WebP" alt="Logo C#" width="340" height="340" decoding="async">
                     </div>
                 </div>
             </div>
@@ -158,37 +174,39 @@ Console.WriteLine($&quot;Pares: {string.Join(&quot;, &quot;, pares)}&quot;);</co
                 <h2>Explore outras linguagens</h2>
                 <div class="other-langs-list">
                     <a href="lua.html" class="other-lang" style="--lang-color: #2f4bd8; --lang-light: #7b97ff;">
-                        <img src="img/icone-lua.png" alt="">
+                        <img src="img/icone-lua.WebP" alt="" width="36" height="36" loading="lazy" decoding="async">
                         <span>Lua</span>
                     </a>
                     <a href="css.html" class="other-lang" style="--lang-color: #1572b6; --lang-light: #55b5ff;">
-                        <img src="img/icone-css.png" alt="">
+                        <img src="img/icone-css.WebP" alt="" width="36" height="36" loading="lazy" decoding="async">
                         <span>CSS</span>
                     </a>
                     <a href="javascript.html" class="other-lang" style="--lang-color: #c9b400; --lang-light: #f7df1e;">
-                        <img src="img/icone-js.png" alt="">
+                        <img src="img/icone-js.WebP" alt="" width="36" height="36" loading="lazy" decoding="async">
                         <span>JavaScript</span>
                     </a>
                     <a href="python.html" class="other-lang" style="--lang-color: #3776ab; --lang-light: #5aa0e0;">
-                        <img src="img/python-card.png" alt="">
+                        <img src="img/python-card.WebP" alt="" width="36" height="36" loading="lazy" decoding="async">
                         <span>Python</span>
                     </a>
                     <a href="java.html" class="other-lang" style="--lang-color: #007396; --lang-light: #3fb4d8;">
-                        <img src="img/icone-java.png" alt="">
+                        <img src="img/icone-java.WebP" alt="" width="36" height="36" loading="lazy" decoding="async">
                         <span>Java</span>
                     </a>
                     <a href="php.html" class="other-lang" style="--lang-color: #777bb4; --lang-light: #aab0e8;">
-                        <img src="img/icone-php.png" alt="">
+                        <img src="img/icone-php.WebP" alt="" width="36" height="36" loading="lazy" decoding="async">
                         <span>PHP</span>
                     </a>
                     <a href="typescript.html" class="other-lang" style="--lang-color: #3178c6; --lang-light: #55b5ff;">
-                        <img src="img/icone-typescript.png" alt="">
+                        <img src="img/icone-typescript.WebP" alt="" width="36" height="36" loading="lazy" decoding="async">
                         <span>TypeScript</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- RODAPÉ -->
     <footer>
@@ -197,9 +215,6 @@ Console.WriteLine($&quot;Pares: {string.Join(&quot;, &quot;, pares)}&quot;);</co
                 <div class="footer-section">
                     <h3>💻 LingProg</h3>
                     <p>Aprenda linguagens de programação de forma prática e divertida.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Links rápidos</h4>
@@ -218,6 +233,23 @@ Console.WriteLine($&quot;Pares: {string.Join(&quot;, &quot;, pares)}&quot;);</co
                     </ul>
                 </div>
             </div>
+            <div class="footer-devs">
+                <h4>Desenvolvedores</h4>
+                <div class="devs-list">
+                    <a href="https://github.com/Dheferson-Santos" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Dheferson Dos Santos Baia">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>DHEFERSON DOS SANTOS BAIA</span>
+                    </a>
+                    <a href="https://github.com/Ilzuko" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Carlos Fernando Silva Magalhaes">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>CARLOS FERNANDO SILVA MAGALHAES</span>
+                    </a>
+                    <a href="https://github.com/luan2904secundaria-pixel" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Luan Lima Vieira">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>LUAN LIMA VIEIRA</span>
+                    </a>
+                </div>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 LingProg devs - Todos os direitos reservados</p>
                 <p class="footer-version">Versão 2.0</p>
@@ -230,9 +262,9 @@ Console.WriteLine($&quot;Pares: {string.Join(&quot;, &quot;, pares)}&quot;);</co
     </button>
 
     <!-- SCRIPTS -->
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-    <script src="linguagem.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" defer></script>
+    <script src="linguagem.js" defer></script>
 </body>
 </html>
